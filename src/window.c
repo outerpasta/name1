@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <SDL2/SDL.h>
+#include <SDL_image.h>
 
 const int WIDTH = 800, HEIGHT = 600;
 
@@ -22,7 +23,7 @@ int window(void) {
   }
   
   renderer = SDL_CreateRenderer(window, -1, 0);
-  SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+  SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
   SDL_RenderClear(renderer);
 
   SDL_RenderPresent(renderer);

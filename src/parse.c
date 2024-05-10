@@ -4,7 +4,7 @@
 
 static void parse(void) {
   xmlDocPtr doc;
-  doc = xmlReadFile("tileset.tsx", NULL, 0);
+  doc = xmlReadFile("assets/tileset.tsx", NULL, 0);
   xmlChar* filname = doc->last->children->next->properties->children->content;
   xmlChar* tilewidth   = doc->children->properties->next->next->next->children->content;
   xmlChar* tileheight   = doc->children->properties->next->next->next->next->children->content;

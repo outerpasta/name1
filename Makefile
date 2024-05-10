@@ -1,28 +1,11 @@
-TARGET  = name1
+CFLAGS=--std=c99 -Wall -Wextra -Werror -pedantic -ggdb3 -Og $(shell sdl2-config --cflags) $(wildcard src/*.c)
+LDFLAGS=$(shell sdl2-config --libs) -I/usr/include/libxml2 -lreadline -lSDL2_image -lxml2
 
-SRC     = repl.c parse.c window.c
-OBJ     = $(SRC:.c=.o)
+PROGRAMS=$(basename $(wildcard *.c))
 
-INCLUDE = -I. -I/msys64/ucrt64/include/libxml2/libxml -I/usr/include/libxml2
-
-LIB     = -lreadline -lxml2 -lSDL2
-
-CC      = cc
-CFLAGS  = --std=c99 -Wall -Wextra -Werror -pedantic -ggdb3 -Og
-
-.SUFFIXES: .c
-
-.c.o:
-	$(CC) $(CFLAGS) $(INCLUDE) -c $<
-
-all: $(TARGET)
-
-$(TARGET): $(OBJ) $(TARGET).c
-	$(CC) $(CFLAGS) $(INCLUDE) $(TARGET).c $(OBJ) $(LIB) -o $(TARGET)
+all: $(PROGRAMS)
 
 clean:
-	rm -f $(OBJ) $(TARGET).o $(TARGET)
+	rm -f $(PROGRAMS) *.o *~
 
-clobber:
-	make clean
-	rm -f core *~
+new: clean all
