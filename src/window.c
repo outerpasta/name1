@@ -4,6 +4,9 @@
 
 const int WIDTH = 800, HEIGHT = 600;
 
+/**
+ * Display window
+ */
 int window(void) {
   SDL_Window *window;
   SDL_Renderer *renderer;

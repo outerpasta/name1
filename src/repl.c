@@ -4,13 +4,13 @@
 #include "header.h"
 
 /**
- * READ EVALUATE PRINT LOOP
+ * Read evaluate print loop
  */
 void repl(void) {
   char *inpt;
   int i = 0;
   while ( i < 10 ) {
-    inpt = readline("user> ");
+    inpt = readline(">> ");
     if (!inpt) return;
     add_history(inpt);
     ++i;
