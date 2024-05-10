@@ -19,6 +19,8 @@ void repl(void) {
       break;
     } else if (strcmp(inpt, "open") == 0) {
       openDocument();
+    } else if (strcmp(inpt, "window") == 0 || strcmp(inpt, "win") == 0) {
+      window();
     } else if (!strcmp(inpt, "") == 0) {
       printf("%s\n", inpt);
     }

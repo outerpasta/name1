@@ -1,11 +1,11 @@
 TARGET  = name1
 
-SRC     = source.c parse.c
+SRC     = repl.c parse.c window.c
 OBJ     = $(SRC:.c=.o)
 
 INCLUDE = -I. -I/msys64/ucrt64/include/libxml2/libxml -I/usr/include/libxml2
 
-LIB     = -lreadline -lxml2
+LIB     = -lreadline -lxml2 -lSDL2
 
 CC      = cc
 CFLAGS  = --std=c99 -Wall -Wextra -Werror -pedantic -ggdb3 -Og
