@@ -2,6 +2,9 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 
+/**
+ * Parse the document
+ */
 static void parse(void) {
   xmlDocPtr doc;
   doc = xmlReadFile("assets/tileset.tsx", NULL, 0);
@@ -12,6 +15,9 @@ static void parse(void) {
   xmlFreeDoc(doc);
 }
 
+/**
+ * Open the document
+ */
 void openDocument(void) {
   LIBXML_TEST_VERSION parse();
   xmlCleanupParser();

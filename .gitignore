@@ -1,3 +1,5 @@
 *~
 *.o
-name1
+/name1
+/compile_commands.json
+/.cache
