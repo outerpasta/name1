@@ -21,7 +21,7 @@ void repl(void) {
       openDocument();
     } else if (strcmp(inpt, "window") == 0 || strcmp(inpt, "win") == 0) {
       window();
-    } else if (!strcmp(inpt, "") == 0) {
+    } else if (strcmp(inpt, "") != 0) {
       printf("%s\n", inpt);
     }
   }
