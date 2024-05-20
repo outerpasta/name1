@@ -14,12 +14,14 @@ void repl(void) {
     if (!inpt) return;
     add_history(inpt);
     ++i;
-    
-    if (strcmp(inpt, "quit") == 0 || strcmp(inpt, "exit") == 0) {
+
+    if (strcmp(inpt, "quit") == 0 ||
+        strcmp(inpt, "exit") == 0) {
       break;
     } else if (strcmp(inpt, "open") == 0) {
       openDocument();
-    } else if (strcmp(inpt, "window") == 0 || strcmp(inpt, "win") == 0) {
+    } else if (strcmp(inpt, "window") == 0 ||
+               strcmp(inpt, "win") == 0) {
       window();
     } else if (strcmp(inpt, "") != 0) {
       printf("%s\n", inpt);
